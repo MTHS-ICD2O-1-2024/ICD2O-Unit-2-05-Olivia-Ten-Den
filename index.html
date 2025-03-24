@@ -39,18 +39,18 @@
       <form>
         <div class="mdl-textfield mdl-js-textfield">
           <!-- input pattern attribute -->
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="base-of-triangle" />
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number-of-hours-worked" />
           <!-- mdl-textfield__label -->
-          <label class="mdl-textfield__label" for="base-of-triangle">Base of triangle (cm)</label>
+          <label class="mdl-textfield__label" for="number-of-hours-worked">Hours worked for (hours)</label>
           <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a number.</span>
         </div>
         <br />
         <div class="mdl-textfield mdl-js-textfield">
           <!-- input pattern attribute -->
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-of-triangle" />
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hourly-wage" />
           <!-- mdl-textfield__label -->
-          <label class="mdl-textfield__label" for="height-of-triangle">Height of triangle (cm)</label>
+          <label class="mdl-textfield__label" for="hourly-wage">Hourly wage ($)</label>
           <!-- class "mdl-textfield__error" -->
           <span class="mdl-textfield__error">Input is not a number.</span>
         </div>
@@ -63,7 +63,8 @@
       </form>
       <br />
       <div class="page-content-answer">
-        <div id="area"></div>
+        <div id="take-home-salary"></div>
+        <div id="income-tax-to-pay"></div>
       </div>
     </main>
   </div>
