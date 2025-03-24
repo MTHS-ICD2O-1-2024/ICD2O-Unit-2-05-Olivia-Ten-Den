@@ -7,21 +7,25 @@
 "use strict"
 
 /**
- * This function calculates area of a triangle.
+ * This function calculates the users take home salary and amount of income tax they must pay.
  */
-function calculateAreaOfTriangle() {
+function calculateUserPayAndTax() {
   // input
-  const baseOfTriangle = parseFloat(
-    document.getElementById("base-of-triangle").value
+  const ONTARIO_INCOME_TAX = 0.18
+
+  const numberOfHoursWorked = parseFloat(
+    document.getElementById("number-of-hours-worked").value
   )
-  const heightOfTriangle = parseFloat(
-    document.getElementById("height-of-triangle").value
-  )
+
+  const hourlyWage = parseFloat(document.getElementById("hourly-wage").value)
 
   // process
-  const areaOfTriangle = (baseOfTriangle * heightOfTriangle) / 2
+  const incomeTaxToPay = (numberOfHoursWorked * hourlyWage) / ONTARIO_INCOME_TAX
+  const takeHomeSalary = numberOfHoursWorked - ONTARIO_INCOME_TAX
 
   // output
-  document.getElementById("area").innerHTML =
-    "The area is: " + areaOfTriangle + " cm²"
+  document.getElementById("take-home-salary").innerHTML =
+    "Your take home salary will be: $" + takeHomeSalary.toFixed(2)
+  document.getElementById("income-tax-to-pay").innerHTML =
+    "The amount of income tax you will pay will be: $" + takeHomeSalary.toFixed(2)
 }
