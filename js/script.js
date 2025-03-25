@@ -20,12 +20,12 @@ function calculateUserPayAndTax() {
   const hourlyWage = parseFloat(document.getElementById("hourly-wage").value)
 
   // process
-  const incomeTaxToPay = (numberOfHoursWorked * hourlyWage) / ONTARIO_INCOME_TAX
-  const takeHomeSalary = numberOfHoursWorked - ONTARIO_INCOME_TAX
+  const incomeTaxToPay = (numberOfHoursWorked * hourlyWage) * ONTARIO_INCOME_TAX
+  const takeHomeSalary = (numberOfHoursWorked * hourlyWage) - incomeTaxToPay
 
   // output
   document.getElementById("take-home-salary").innerHTML =
     "Your take home salary will be: $" + takeHomeSalary.toFixed(2)
-  document.getElementById("income-tax-to-pay").innerHTML =
-    "The amount of income tax you will pay will be: $" + takeHomeSalary.toFixed(2)
+    document.getElementById("income-tax-to-pay").innerHTML =
+    "The amount of income tax you will pay will be: $" + incomeTaxToPay.toFixed(2)
 }
